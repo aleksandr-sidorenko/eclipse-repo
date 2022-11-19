@@ -15,7 +15,7 @@ public class Main {
 	
 	
 	try {
-        BufferedReader reader = new BufferedReader(new FileReader("/home/aleks/git/eclipse-repo/CSIS1410/res/ASCII.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("/res/ASCII.txt"));
         String text;
         while((text = reader.readLine()) != null) {
             System.out.println(text);
