@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
@@ -21,6 +22,7 @@ public class JMap extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -39,6 +41,7 @@ public class JMap extends JFrame {
 	public JMap() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(700, 700, 1100, 800);
+		setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setSize(new Dimension(10, 10));
 		contentPane.setPreferredSize(new Dimension(10, 10));
