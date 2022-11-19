@@ -13,6 +13,7 @@ import java.awt.Dimension;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class JMap extends JFrame {
 
@@ -23,6 +24,8 @@ public class JMap extends JFrame {
 	 */
 	public static void main(String[] args) {
 		
+		
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -31,8 +34,12 @@ public class JMap extends JFrame {
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
+				
 			}
 		});
+		
+		MediaPlayer player = new MediaPlayer();
+		player.Play();
 	}
 
 	/**
@@ -56,13 +63,18 @@ public class JMap extends JFrame {
 		contentPane.add(lblNewLabel, BorderLayout.CENTER);
 		
 		JButton btnNewButton = new JButton("Start Game");
+		btnNewButton.setFont(new Font("Dialog", Font.BOLD, 14));
 		btnNewButton.setPreferredSize(new Dimension(114, 40));
 		btnNewButton.addActionListener(new ActionListener() {
+			
 			public void actionPerformed(ActionEvent e) {
 				
 			}
 		});
 		contentPane.add(btnNewButton, BorderLayout.SOUTH);
+		
 	}
+	
+	
 
 }
