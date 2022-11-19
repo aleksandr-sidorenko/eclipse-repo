@@ -9,6 +9,8 @@ public class Main {
 	public static void main(String[] args) {
 		
 		System.out.print("Hello Battleship!");
+		
+
 
 	
 	
@@ -18,7 +20,6 @@ public class Main {
         while((text = reader.readLine()) != null) {
             System.out.println(text);
         }
-        //System.out.println(reader.readLine());
         reader.close();
 
     } catch (IOException e) {
@@ -26,4 +27,9 @@ public class Main {
     }
 
   }
+	
+	public String run() {
+		
+		return "";
+	}
 }
