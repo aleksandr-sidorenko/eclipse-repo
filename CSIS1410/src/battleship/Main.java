@@ -1,17 +1,23 @@
 package battleship;
 
+
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+
+import javax.print.attribute.standard.Media;
+import javax.swing.JOptionPane;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		System.out.print("Hello Battleship!");
 		
-
-
+		
+		System.out.print("Hello Battleship!");
 	
 	
 	try {
@@ -27,9 +33,5 @@ public class Main {
     }
 
   }
-	
-	public String run() {
-		
-		return "";
-	}
+
 }
