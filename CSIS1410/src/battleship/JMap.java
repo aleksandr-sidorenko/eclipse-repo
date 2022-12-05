@@ -5,7 +5,6 @@ import java.awt.EventQueue;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
@@ -18,6 +17,8 @@ import java.awt.Font;
 public class JMap extends JFrame {
 
 	private JPanel contentPane;
+	private JButton btnNewButton;
+	private JLabel photo = new JLabel("");
 
 	/**
 	 * Launch the application.
@@ -47,7 +48,7 @@ public class JMap extends JFrame {
 	 */
 	public JMap() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(700, 700, 1100, 800);
+		setBounds(700, 700, 900, 600);
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setSize(new Dimension(10, 10));
@@ -57,21 +58,27 @@ public class JMap extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
 		
-		JLabel lblNewLabel = new JLabel("");
-		contentPane.add(lblNewLabel, BorderLayout.CENTER);
-		lblNewLabel.setIcon(new ImageIcon(JMap.class.getResource("/Battleship.jpeg")));
-		contentPane.add(lblNewLabel, BorderLayout.CENTER);
+		contentPane.add(photo, BorderLayout.CENTER);
+		photo.setIcon(new ImageIcon(JMap.class.getResource("/Battleship.jpeg")));
+		contentPane.add(photo, BorderLayout.CENTER);
 		
-		JButton btnNewButton = new JButton("Start Game");
+		btnNewButton = new JButton("Start Game");
+		contentPane.add(btnNewButton, BorderLayout.SOUTH);
 		btnNewButton.setFont(new Font("Dialog", Font.BOLD, 14));
 		btnNewButton.setPreferredSize(new Dimension(114, 40));
 		btnNewButton.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent e) {
-				
+				btnNewButton.setVisible(false);
+				photo.setVisible(false);
+				GamePlay();
 			}
 		});
-		contentPane.add(btnNewButton, BorderLayout.SOUTH);
+
+		
+	}
+	
+	public void GamePlay() {
 		
 	}
 	
