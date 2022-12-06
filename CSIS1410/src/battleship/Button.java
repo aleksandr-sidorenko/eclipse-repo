@@ -30,5 +30,19 @@ public class Button {
 		this.isTried = isTried;
 	}
 
+	@Override
+	public String toString() {
+		String btn = " ";
+		if (isShip && isTried)
+			btn = "x";
+		else if(!isShip && isTried)
+			btn = "O";
+		else if (!isTried)
+			btn = "=";
+		return btn;
+	}
+	
+	
+
 
 }

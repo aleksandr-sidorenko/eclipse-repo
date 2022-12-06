@@ -2,12 +2,25 @@ package battleship;
 
 public class Board {
 	
-	Button HitMiss[][];
+	private static Button HitMiss[][];
 	
+	
+	
+	public static String PrintBoard() {
+		String board ="\n";
+		for(int i = 0; i < 10 ; i++) {
+			for(int j = 0; j < 10 ; j++) {
+				board = board + HitMiss[i][j].toString();
+			}
+			board= board+"\n";
+		}
+		
+		return board;
+	}
 	/**
 	 * a method to populate the board with buttons
 	 */
-	public void Populate() {
+	public static void Populate() {
 		for(int i = 0; i < 10 ; i++) {
 			for(int j = 0; j < 10 ; j++) {
 				HitMiss[i][j] = new Button(false, false);
@@ -15,6 +28,19 @@ public class Board {
 		}
 	}
 	
+	public boolean LocationAvailable(int ShipSize, boolean verticle, int x, int y) {
+		for(int i=0;i<ShipSize;i++) {
+			if (i+x>9 || i+y>9)
+				return false;
+			if (verticle == true)
+				if (HitMiss[x][y+i].isShip())
+					return false;
+			else
+				if(HitMiss[x+i][y].isShip())
+					return false;
+		}
+		return true;
+	}
 	public void PlaceShip(int shipSize, boolean verticle, int x, int y) {
 		for(int i=0;i<shipSize;i++) {
 			if (verticle == true)
@@ -24,16 +50,16 @@ public class Board {
 		}
 	}
 	
-	public String attack(int x, int y) {
-		String retn = "";
+	public boolean attack(int x, int y) {
+		boolean retn;
 		if (!HitMiss[x][y].isTried())
-			retn = "Location already Tried";
+			retn = (Boolean) null;
 		else if (HitMiss[x][y].isShip())
-			retn = "You Hit";
+			retn = true;
 		else if (!HitMiss[x][y].isShip())
-			retn = "you missed";
+			retn = false;
 		else
-			retn = "an error has occured";
+			retn = (Boolean) null;
 		HitMiss[x][y].setTried(true);
 		return retn;
 	}
