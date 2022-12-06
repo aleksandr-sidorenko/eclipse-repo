@@ -9,19 +9,19 @@ package battleship;
 
 public class Button {
 	
-	private boolean isHit;
+	private boolean isShip;
 	private boolean isTried;
 	
 	public Button(boolean isHit, boolean isTried) {
-		this.isHit = isHit;
+		this.isShip = isHit;
 		this.isTried = isTried;
 	}
 	
-	public boolean isHit() {
-		return isHit;
+	public boolean isShip() {
+		return isShip;
 	}
-	public void setHit(boolean isHit) {
-		this.isHit = isHit;
+	public void setShip(boolean isHit) {
+		this.isShip = isHit;
 	}
 	public boolean isTried() {
 		return isTried;
