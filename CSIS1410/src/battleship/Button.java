@@ -38,7 +38,7 @@ public class Button {
 		else if(!isShip && isTried)
 			btn = "O";
 		else if (!isTried)
-			btn = "=";
+			btn = "[]";
 		return btn;
 	}
 	
