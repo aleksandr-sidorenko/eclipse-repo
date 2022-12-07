@@ -2,12 +2,13 @@ package battleship;
 
 public class Board {
 	
-	private static Button HitMiss[][];
+	private static Button HitMiss[][] = new Button[10][10];
 	
 	
 	
 	public static String PrintBoard() {
 		String board ="\n";
+		
 		for(int i = 0; i < 10 ; i++) {
 			for(int j = 0; j < 10 ; j++) {
 				board = board + HitMiss[i][j].toString();
@@ -41,6 +42,8 @@ public class Board {
 		}
 		return true;
 	}
+	
+	
 	public void PlaceShip(int shipSize, boolean verticle, int x, int y) {
 		for(int i=0;i<shipSize;i++) {
 			if (verticle == true)
