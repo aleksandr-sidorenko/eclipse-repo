@@ -48,7 +48,7 @@ public class JMap extends JFrame {
 	 */
 	public JMap() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(700, 700, 900, 600);
+		setBounds(850, 850, 1100, 800);
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setSize(new Dimension(10, 10));
